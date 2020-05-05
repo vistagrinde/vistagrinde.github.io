@@ -39,29 +39,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   <!-- First Photo Grid-->
   <div class="w3-row-padding w3-padding-16 w3-center" id="food">
     <div class="w3-third">
-      <a data-toggle="modal" data-target="#myModal">
-        <img src="./images/embryo.jpg" alt="embryo" style="width:100%">
-      </a>
+     <img src="./images/baby.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
 
-	 <!-- Modal -->
-	  <div class="modal fade" id="myModal" role="dialog">
-	    <div class="modal-dialog">
-	    
-	      <!-- Modal content-->
-	      <div class="modal-content">
-		<div class="modal-header">
-		  <button type="button" class="close" data-dismiss="modal">&times;</button>
-		  <h4 class="modal-title">Snake Embryo</h4>
-		</div>
-		<div class="modal-body">
-		  <p>Some text in the modal.</p>
-		</div>
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		</div>
-	      </div>
-	      
-	    </div>
+<map name="workmap">
+  <area shape="circle" coords="337,300,44" onclick="myFunction()">
+</map>
 	  </div>
 
       <h3>Snake Embryo</h3>
@@ -149,6 +131,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 </div>
 
 <script>
+
+function myFunction() {
+  alert("You clicked the coffee cup!");
+}
 // Script to open and close sidebar
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
