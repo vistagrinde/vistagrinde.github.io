@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<title>LifeCycle of A Snake</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Full Credit to w3-schools for css styles -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+</style>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Works Cited</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-center w3-padding-16">Life Cycle of A Snake</div>
+  </div>
+</div>
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-third">
+      <a data-toggle="modal" data-target="#myModal">
+        <img src="./images/embryo.jpg" alt="embryo" style="width:100%">
+      </a>
+
+	 <!-- Modal -->
+	  <div class="modal fade" id="myModal" role="dialog">
+	    <div class="modal-dialog">
+	    
+	      <!-- Modal content-->
+	      <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal">&times;</button>
+		  <h4 class="modal-title">Snake Embryo</h4>
+		</div>
+		<div class="modal-body">
+		  <p>Some text in the modal.</p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		</div>
+	      </div>
+	      
+	    </div>
+	  </div>
+
+      <h3>Snake Embryo</h3>
+      <p>The Beginning of a snake's life.</p>
+    </div>
+    <div class="w3-third">
+      <a data-toggle="modal" data-target="#myModal2">
+        <img src="./images/baby.jpg" alt="Baby" style="width:100%">
+      </a>
+	 <!-- Modal -->
+	  <div class="modal fade" id="myModal2" role="dialog">
+	    <div class="modal-dialog">
+	    
+	      <!-- Modal content-->
+	      <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal">&times;</button>
+		  <h4 class="modal-title">Snake Baby</h4>
+		</div>
+		<div class="modal-body">
+		  <p>Some text in the modal.</p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		</div>
+	      </div>
+	      
+	    </div>
+	  </div>
+
+      <h3>Baby Snek</h3>
+      <p>Wow so cute now but soon to be so terrifying</p>
+    </div>
+    <div class="w3-third">
+      <a data-toggle="modal" data-target="#myModal3">
+        <img src="./images/adult.png" alt="Adult" style="width:100%">
+      </a>
+	 <!-- Modal -->
+	  <div class="modal fade" id="myModal3" role="dialog">
+	    <div class="modal-dialog">
+	    
+	      <!-- Modal content-->
+	      <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal">&times;</button>
+		  <h4 class="modal-title">Adult Snake</h4>
+		</div>
+		<div class="modal-body">
+		  <p>Some text in the modal.</p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		</div>
+	      </div>
+	      
+	    </div>
+	  </div>
+      <h3>Adult Snake</h3>
+      <p>This one tried to kill Harry Potter</p>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>More Information About Snakes</h3><br>
+    <img src="./images/cycle.png" alt="Cycle" class="w3-image" style="display:block;margin:auto" width="100" height="100">
+    <div class="w3-padding-32">
+      <h4><b>The Circle of Life!</b></h4>
+      <h6><i>Wow Earth Is Amazing</i></h6>
+      <p>You Can Put More Info Here.</p>
+    </div>
+  </div>
+  <hr>
+  
+  <!-- Footer -->
+  <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+      <h3>Author: </h3>
+      <p>Date:</p>
+      <p>Time:</p>
+    </div>
+  </footer>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
