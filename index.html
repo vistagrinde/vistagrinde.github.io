@@ -102,9 +102,9 @@ body {font-family: Arial;}
     </span>
 </div>
 
-  <img src="/images/Adult.png" usemap="#Adultmap" alt="Workplace" width="461" height="225">
+  <img src="/images/Adult.png" usemap="#adultmap" alt="Workplace" width="461" height="225">
 
-<map name="#Adultmap">
+<map name="#adultmap">
   <area shape="rect" coords="72, 27, 92, 46" onclick="myFunctionAdul(1)">
    <area shape="rect" coords="80, 116, 99, 132" onclick="myFunctionAdul(2)">
 </map>
@@ -112,16 +112,7 @@ body {font-family: Arial;}
 
 <script>
   
-  
-    window.onload = function1() {
-    document.getElementById('onclickembryo').innerHTML = "Hello";
-}
-   window.onload = function2() {
-    document.getElementById('onclickjuvenile').innerHTML = "Hello";
-}
-   window.onload = function3() {
-    document.getElementById('onclickadult').innerHTML = "Hello";
-}
+
  function myFunctionEmb(variable) {
    if (variable == 1){
    document.getElementById('onclickembryo').innerHTML ="Clicked 1!";
