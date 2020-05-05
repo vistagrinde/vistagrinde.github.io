@@ -65,7 +65,12 @@ body {font-family: Arial;}
 <div id="Juvenile" class="tabcontent">
   <h3>Juvenile</h3>
   <p>This is a juvenile snake </p> 
-  
+  <div class="add-info">
+    <span class="rightfloat">
+        <span id="contact-number"></span>
+        </span>
+    </span>
+</div>
   <img src="/images/Juvenile.png" usemap="#juvenilemap" alt="Workplace" width="381" height="173">
 
 <map name="#juvenilemap">
@@ -83,9 +88,12 @@ body {font-family: Arial;}
 </div>
 
 <script>
-  
+  window.onload = function() {
+    document.getElementById('contact-number').innerHTML = "Hello";
+}
  function myFunction() {
-  alert("You clicked the coffee cup!");
+   document.getElementById('contact-number').innerHTML = "Clicked!";
+  
 }
 function openCity(evt, cityName) {
   var i, tabcontent, tablinks;
