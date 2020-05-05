@@ -130,8 +130,17 @@ body {font-family: Arial;}
         </span>
     </span>
 </div>
+
+ 
+ <div class="juv">
+    <span class="rightfloat">
+      <p style="font-size:20px"><b><span id="onclickjuveniletext"></b></p></span>
+        </span>
+    </span>
 </div>
 
+
+</div>
 <div id="Adult" class="tabcontent">
   <h3>Adult Stage</h3>
   <p>Skull Lenght: 17.1 mm</p>
@@ -169,6 +178,13 @@ body {font-family: Arial;}
         </span>
     </span>
 </div>
+
+ <div class="adul">
+    <span class="rightfloat">
+        <p style="font-size:20px"><b><span id="onclickadulttext"></b></p></span>
+        </span>
+    </span>
+</div>
   
 
 </div>
@@ -202,10 +218,11 @@ body {font-family: Arial;}
 }
   
   let JuvenileList = ["Nasal", "Frontal", "Maxilla", "Parietal", "Supratemporal", "Quadrate", "Compound Bone", "Pterygoid", "Otoccipital"];
-  
+  let JuvenileListText = ["Nasal text", "Frontal 2nd text"];
  function myFunctionJuv(variable) {
    if (variable == 1){
    document.getElementById('onclickjuvenile').innerHTML = JuvenileList[0];
+    document.getElementById('onclickjuveniletext').innerHTML = JuvenileListText[0];
    } else if(variable == 2){
    document.getElementById('onclickjuvenile').innerHTML = JuvenileList[1];
    }else if(variable == 3){
@@ -225,10 +242,13 @@ body {font-family: Arial;}
    }
 }
   let AdultList = ["Nasal", "Frontal", "Maxilla", "Parietal", "Supratemporal", "Quadrate", "Compound Bone", "Pterygoid", "Otoccipital"];
-   
+  let  AdultListText = ["Nasal first", "Frontal Second"];
  function myFunctionAdul(variable) {
    if (variable == 1){
+     
    document.getElementById('onclickadult').innerHTML = AdultList[0];
+   document.getElementById('onclickadulttext').innerHTML = AdultListText[0];
+     
    } else if(variable == 2){
    document.getElementById('onclickadult').innerHTML = AdultList[1];
    }else if(variable == 3){
