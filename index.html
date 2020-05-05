@@ -123,13 +123,13 @@ body {font-family: Arial;}
 </div>
 
 <script>
-  
+  let EmbryoList = ["Embryo 1", "Embryo 2"];
 
  function myFunctionEmb(variable) {
    if (variable == 1){
-   document.getElementById('onclickembryo').innerHTML ="Clicked 1!";
+   document.getElementById('onclickembryo').innerHTML = EmbryoList[0];
    } else if(variable == 2){
-   document.getElementById('onclickembryo').innerHTML ="Clicked 2!";
+   document.getElementById('onclickembryo').innerHTML = EmbryoList[1];
    }
 }
   
