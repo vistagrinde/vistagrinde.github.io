@@ -80,9 +80,15 @@ body {font-family: Arial;}
      <area shape="rect" coords="282, 72, 297, 90" onclick="myFunctionEmb(9)">
 </map>
   
-    <div class="emb">
+<div class="emb">
     <span class="rightfloat">
         <p style="font-size:20px"><b><span id="onclickembryo"></b></p></span>
+        </span>
+    </span>
+</div>
+<div class="emb">
+    <span class="rightfloat">
+        <p style="font-size:20px"><b><span id="onclickembryotext"></b></p></span>
         </span>
     </span>
 </div>
@@ -169,10 +175,13 @@ body {font-family: Arial;}
 
 <script>
   let EmbryoList = ["Nasal", "Frontal", "Maxilla", "Parietal", "Supratemporal", "Quadrate", "Compound Bone", "Pterygoid", "Otoccipital"];
-
+  let EmbryoListText = ["First text for nasal", "Second text for frontal"];
+  
+  
  function myFunctionEmb(variable) {
    if (variable == 1){
    document.getElementById('onclickembryo').innerHTML = EmbryoList[0];
+     document.getElementById('onclickembryotext').innerHTML = EmbryoListText[0];
    } else if(variable == 2){
    document.getElementById('onclickembryo').innerHTML = EmbryoList[1];
    }else if(variable == 3){
