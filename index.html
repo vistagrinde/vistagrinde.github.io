@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<title>The Lifecycle of Snakes</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="The Lifecycle of Snakes" />
 <!-- Full Credit to w3-schools for css styles -->
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
@@ -11,8 +11,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
-.w3-bar-block .w3-bar-item {padding:20px}
+body {font-family: Arial;}
+
+/* Style the tab */
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
@@ -60,64 +61,27 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   to {opacity: 1;}
 }
 </style>
+</head>
 <body>
+
+<h3>Fade in Tabs</h3>
+
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'London')">Embryo</button>
   <button class="tablinks" onclick="openCity(event, 'Paris')">Juvenile</button>
   <button class="tablinks" onclick="openCity(event, 'Tokyo')">Adult</button>
 </div>
 
-<!-- !PAGE CONTENT! -->
 
-<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-<div id="London" class="tabcontent">
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-    <div class="w3-third">
-     <img src="./images/baby.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+          
 
-<map name="workmap">
-  <area shape="circle" coords="337,300,44" onclick="myFunction()">
-</map>
-	  </div>
-
-      <h3>Snake Embryo</h3>
-      <p>The Beginning of a snake's life.</p>
-    </div>
+<div id="Tokyo" class="tabcontent">
     <div class="w3-third">
       <a data-toggle="modal" data-target="#myModal2">
-        <img src="./images/baby.jpg" alt="Baby" style="width:100%">
+        <img src="/images/baby.jpg" alt="Baby" style="width:100%">
       </a>
 	 <!-- Modal -->
 	  <div class="modal fade" id="myModal2" role="dialog">
-	    <div class="modal-dialog">
-	    
-	      <!-- Modal content-->
-	      <div class="modal-content">
-		<div class="modal-header">
-		  <button type="button" class="close" data-dismiss="modal">&times;</button>
-		  <h4 class="modal-title">Snake Baby</h4>
-		</div>
-		<div class="modal-body">
-		  <p>Some text in the modal.</p>
-		</div>
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		</div>
-	      </div>
-	      
-	    </div>
-	  </div>
-
-      <h3>Baby Snek</h3>
-      <p>Wow so cute now but soon to be so terrifying</p>
-    </div>
-    <div class="w3-third">
-      <a data-toggle="modal" data-target="#myModal3">
-        <img src="./images/adult.png" alt="Adult" style="width:100%">
-      </a>
-	 <!-- Modal -->
-	  <div class="modal fade" id="myModal3" role="dialog">
 	    <div class="modal-dialog">
 	    
 	      <!-- Modal content-->
@@ -136,50 +100,30 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 	      
 	    </div>
 	  </div>
+
       <h3>Adult Snake</h3>
-      <p>This one tried to kill Harry Potter</p>
+      <p>CLick picture to see some texts</p>
     </div>
-  </div>
-
-  <!-- About Section -->
-  <div class="w3-container w3-padding-32 w3-center">  
-    <h3>More Information About Snakes</h3><br>
-    <img src="./images/cycle.png" alt="Cycle" class="w3-image" style="display:block;margin:auto" width="100" height="100">
-    <div class="w3-padding-32">
-      <h4><b>The Circle of Life!</b></h4>
-      <h6><i>Wow Earth Is Amazing</i></h6>
-      <p>You Can Put More Info Here.</p>
-    </div>
-  </div>
-  <hr>
-  
-  <!-- Footer -->
-  <footer class="w3-row-padding w3-padding-32">
-    <div class="w3-third">
-      <h3>Author: </h3>
-      <p>Date:</p>
-      <p>Time:</p>
-    </div>
-  </footer>
-
-<!-- End page content -->
-</div>
 </div>
 
 <script>
 
-function myFunction() {
-  alert("You clicked the coffee cup!");
-}
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
+
+
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
 }
 </script>
-
+   
 </body>
-</html>
+</html> 
