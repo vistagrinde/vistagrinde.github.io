@@ -71,6 +71,13 @@ body {font-family: Arial;}
        <area shape="rect" coords="97, 111, 116, 117" onclick="myFunctionEmb(3)">
     <area shape="rect" coords="104, 136, 123, 145" onclick="myFunctionEmb(3)">
     <area shape="rect" coords="107, 15, 194, 148" onclick="myFunctionEmb(4)">
+    <area shape="rect" coords="213, 120, 228, 146" onclick="myFunctionEmb(5)">
+     <area shape="rect" coords="238, 125, 249, 144" onclick="myFunctionEmb(6)">
+    <area shape="rect" coords="260, 107, 273, 113" onclick="myFunctionEmb(7)">
+    <area shape="rect" coords="268, 124, 294, 130" onclick="myFunctionEmb(7)">
+    <area shape="rect" coords="282, 98, 299, 112" onclick="myFunctionEmb(8)">
+    <area shape="rect" coords="258, 75, 263, 100" onclick="myFunctionEmb(9)">
+     <area shape="rect" coords="282, 72, 297, 90" onclick="myFunctionEmb(9)">
 </map>
   
     <div class="emb">
@@ -128,7 +135,7 @@ body {font-family: Arial;}
 </div>
 
 <script>
-  let EmbryoList = ["Nasal", "Frontal", "Maxilla", "Parietal"];
+  let EmbryoList = ["Nasal", "Frontal", "Maxilla", "Parietal", "Supratemporal", "Quadrate", "Compound Bone", "Pterygoid", "Otoccipital"];
 
  function myFunctionEmb(variable) {
    if (variable == 1){
@@ -139,6 +146,16 @@ body {font-family: Arial;}
    document.getElementById('onclickembryo').innerHTML = EmbryoList[2];
    }else if(variable == 4){
    document.getElementById('onclickembryo').innerHTML = EmbryoList[3];
+   }else if(variable == 5){
+   document.getElementById('onclickembryo').innerHTML = EmbryoList[4];
+   }else if(variable == 6){
+   document.getElementById('onclickembryo').innerHTML = EmbryoList[5];
+   }else if(variable == 7){
+   document.getElementById('onclickembryo').innerHTML = EmbryoList[6];
+   }else if(variable == 8){
+   document.getElementById('onclickembryo').innerHTML = EmbryoList[7];
+   }else if(variable == 9){
+   document.getElementById('onclickembryo').innerHTML = EmbryoList[8];
    }
 }
   
