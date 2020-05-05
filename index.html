@@ -53,7 +53,7 @@ body {font-family: Arial;}
   <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
 </div>
 
-<div id="London" class="tabcontent">
+<div id="Embryo" class="tabcontent">
   <h3>Embryo</h3>
   
   <p>This is an embro of snek</p>
@@ -65,17 +65,33 @@ body {font-family: Arial;}
 </map>
 </div>
 
-<div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
+<div id="Juvenile" class="tabcontent">
+  <h3>Juvenile</h3>
+  <p>This is a juvenile snake </p> 
+  
+  <img src="/images/baby.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+<map name="workmap">
+  <area shape="circle" coords="337,300,44" onclick="myFunction()">
+</map>
 </div>
 
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+<div id="Adult" class="tabcontent">
+  <h3>Adult</h3>
+  <p>This is an adult snake.</p>
+  
+  <img src="/images/baby.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+  <map name="workmap">
+  <area shape="circle" coords="337,300,44" onclick="myFunction()">
+</map>
 </div>
 
 <script>
+  
+ function myFunction() {
+  alert("You clicked the coffee cup!");
+}
 function openCity(evt, cityName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
