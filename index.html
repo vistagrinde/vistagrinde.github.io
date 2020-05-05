@@ -2,14 +2,6 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Full Credit to w3-schools for css styles -->
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <style>
 body {font-family: Arial;}
 
@@ -46,70 +38,37 @@ body {font-family: Arial;}
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  -webkit-animation: fadeEffect 1s;
-  animation: fadeEffect 1s;
-}
-
-/* Fade in tabs */
-@-webkit-keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  border: 1px solid #ccc;
+  border-top: none;
 }
 </style>
 </head>
 <body>
 
-<h3>Fade in Tabs</h3>
+<p>In this example, we use JavaScript to "click" on the London button, to open the tab on page load.</p>
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">Embryo</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Juvenile</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Adult</button>
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
 </div>
 
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
 
-          
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
 
 <div id="Tokyo" class="tabcontent">
-    <div class="w3-third">
-      <a data-toggle="modal" data-target="#myModal2">
-        <img src="/images/baby.jpg" alt="Baby" style="width:100%">
-      </a>
-	 <!-- Modal -->
-	  <div class="modal fade" id="myModal2" role="dialog">
-	    <div class="modal-dialog">
-	    
-	      <!-- Modal content-->
-	      <div class="modal-content">
-		<div class="modal-header">
-		  <button type="button" class="close" data-dismiss="modal">&times;</button>
-		  <h4 class="modal-title">Adult Snake</h4>
-		</div>
-		<div class="modal-body">
-		  <p>Some text in the modal.</p>
-		</div>
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		</div>
-	      </div>
-	      
-	    </div>
-	  </div>
-
-      <h3>Adult Snake</h3>
-      <p>CLick picture to see some texts</p>
-    </div>
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
 </div>
 
 <script>
-
-
-
 function openCity(evt, cityName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -123,6 +82,9 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 </script>
    
 </body>
