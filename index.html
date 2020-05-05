@@ -133,21 +133,22 @@ body {font-family: Arial;}
    }
 }
   
+  let JuvenileList = ["Juvenile 1", "Juvenile 2"];
   
  function myFunctionJuv(variable) {
    if (variable == 1){
-   document.getElementById('onclickjuvenile').innerHTML ="Clicked 1!";
+   document.getElementById('onclickjuvenile').innerHTML = JuvenileList[0];
    } else if(variable == 2){
-   document.getElementById('onclickjuvenile').innerHTML ="Clicked 2!";
+   document.getElementById('onclickjuvenile').innerHTML = JuvenileList[1];
    }
 }
-  
+  let AdultList = ["Adult 1", "Adult 2"];
    
  function myFunctionAdul(variable) {
    if (variable == 1){
-   document.getElementById('onclickadult').innerHTML ="Clicked 1!";
+   document.getElementById('onclickadult').innerHTML = AdultList[0];
    } else if(variable == 2){
-   document.getElementById('onclickadult').innerHTML ="Clicked 2!";
+   document.getElementById('onclickadult').innerHTML = AdultList[1];
    }
 }
  
