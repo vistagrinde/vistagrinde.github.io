@@ -70,6 +70,7 @@ body {font-family: Arial;}
     <area shape="rect" coords="62, 41, 91, 142" onclick="myFunctionEmb(2)">
        <area shape="rect" coords="97, 111, 116, 117" onclick="myFunctionEmb(3)">
     <area shape="rect" coords="104, 136, 123, 145" onclick="myFunctionEmb(3)">
+    <area shape="rect" coords="107, 15, 194, 148" onclick="myFunctionEmb(4)">
 </map>
   
     <div class="emb">
@@ -127,7 +128,7 @@ body {font-family: Arial;}
 </div>
 
 <script>
-  let EmbryoList = ["Nasal", "Frontal", "Maxilla"];
+  let EmbryoList = ["Nasal", "Frontal", "Maxilla", "Parietal"];
 
  function myFunctionEmb(variable) {
    if (variable == 1){
@@ -136,6 +137,8 @@ body {font-family: Arial;}
    document.getElementById('onclickembryo').innerHTML = EmbryoList[1];
    }else if(variable == 3){
    document.getElementById('onclickembryo').innerHTML = EmbryoList[2];
+   }else if(variable == 4){
+   document.getElementById('onclickembryo').innerHTML = EmbryoList[3];
    }
 }
   
